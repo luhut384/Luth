@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Web Profil</title>
+</head>
+<body>
+    
+<style>
+
+    *{
+        font-family: 'poppins', sans-serif;
+        margin: 10px;
+    }
+.data{
+    width: 100%;
+    font-size: 18px;
+}
+
+.data h3{
+    text-decoration: underline;
+}
+
+.data a{
+    display: flex;
+}
+
+.isi{
+    display: flex;
+}
+
+.galeri{
+    display: flex;
+}
+
+.gambar{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.fileku a{
+    display: flex;
+    padding: 10px;
+    width: 200px;
+}
+
+</style>
+
+<fieldset>
+    <legend><h3>Perkenalan Diri</h3></legend>
+<table class="data">
+    <tbody>
+        <tr>
+            <td><img src="e.jpeg" alt="foto" width="300px" height="300px"></td>
+
+            <td>
+                <h1>Data</h1>
+                <p>Nama    : Luth Hud Maulana</p>
+                <p>Alamat  : Jalan Lenteng Agung Timur No. 36, Srengseng Sawah, Jagakarsa, Kota Jakarta Selatan, DKI Jakarta</p>
+                <p>Email   : sinambelaluthhudmaulana@gmail.com</p>
+                <p>Telepon : 082162136125</p>
+            </td>
+
+            <td>
+                <h3>Ingin Kenalan ?</h3>
+                <a href="https://nurulfikri.ac.id/">Perkuliahan</a>
+                <a href="https://github.com/">Github</a>
+                <a href="">Instagram</a>
+            </td>
+        </div>
+        </tr>
+    </tbody>
+</table>
+
+<div class="isi">
+    <p>Saya adalah seorang individu yang dalam beberapa waktu terakhir saya menghadapi tantangan dalam hal produktivitas dan motivasi.Saya menyadari bahawa saya memiliki kecenderungan untuk menjadi malas adalam pekerjaan dan tugas sehari hari. <br><br> Namun saya sedang berusaha keras untuk mengatasi kelemahan ini.Saya merencanakan jadwal,menetapkan tujuan yang lebih kecil,dan mencari sumber inspirasi untuk meningkatkan produktivitas saya.Saya tahu bahhwa perjalanan ini mungkin memerlukan waktu ,tetapi saya bertekad untuk berubah dan menjadi lebih rajin upaya mencapai potensi saya yang sebenarnya.
+</div>
+
+<div class="galeri">
+<div class="vid">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/OkZNTjv1dEU?si=og6sDRSK6whzPfmC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+<div class="gambar">
+    <img height="200px" width="200px" src="a.jpg" >
+    <img height="200px" width="200px" src="b.jpg" >
+    <img height="200px" width="200px" src="c.jpg" >
+    <img height="200px" width="200px" src="d.jpg" >
+</div>
+<fieldset class="fileku">
+    <legend>
+        <h2>Link Download File</h2>
+    </legend>
+    <a href="https://drive.google.com/drive/folders/13SiTn1uOUTEwGY1Ku7N8dFbZUOzEDsNq">Dokumen 1</a>
+    <a href="https://drive.google.com/file/d/11NzoXLIamYsAUOuNNoQ5QTABspm8NXVS/view?usp=drivesdk">Dokumen 2</a>
+    <a href="https://drive.google.com/file/d/1S4I9aRHr3CEAAUL1IwmGjrBGsWsyPfpr/view?usp=drivesdk">Dokumen 3</a>
+    <a href="https://drive.google.com/file/d/13I_Y6d5tpxGSGzYvX_3VF9OqMxKkKV1K/view?usp=drivesdk">Dokumen 4</a>
+</fieldset>
+</div>
+</fieldset>
+
+</body>
+</html>
