@@ -1,0 +1,83 @@
+body{
+    background-color: rgb(168, 189, 114);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1{
+    text-align: center;
+    color: blueviolet;
+}
+
+p{
+    text-align: center;
+    width: fit-content;
+}
+
+.center{
+    width: 350px;
+    display: 350px;
+    margin-left: 350px;
+    margin-right: 350px;
+}
+
+.foto{
+    justify-content: center;
+    display: flex;
+}
+.foto img{
+    width: 300px;
+    height: 300px;
+}
+
+.cod{
+    justify-content: center;
+    display: flex;
+}
+.cod p{
+    background-color: aqua;
+    border: 1px dotted red;
+    text-align: center;
+    font-weight: bold;
+    color: blue;
+}
+.pokat {
+    justify-content: center;
+    display: flex;
+}
+.pokat img{
+    width: 300px;
+    height: 300px;
+}
+
+.a{
+    justify-content: center;
+    display: flex;
+}
+
+.a img{
+    width: 300px;
+    height: 300px;
+}
+#tombol{
+    justify-content: center;
+    display: flex;
+}
+#tombol button{
+    background: yellow;
+    color: brown;
+}
+table {
+    border-collapse: collapse;
+    width: 50%;
+}
+th, td {
+    border: 3px solid #03040c;
+    text-align: left;
+    padding: 8px;
+}
+th {
+    background-color: #18ac49;
+}
+tr:nth-child(even) {
+    background-color: #50ab12;
+}

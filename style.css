@@ -1,0 +1,26 @@
+
+#header{
+    background-color: #ffe4c4;
+    text-align: center;
+ }
+blockquote{
+    background-color: pink;
+    color: black;
+}
+body{
+    background-color:burlywood;
+    color:red;
+}
+.gambar {
+    display: flex;
+    justify-content: center;
+}
+.koleksi img{
+    width: 370px;
+    height: 300px;
+}
+button{
+    justify-content: center;
+    display: flex;
+}
+
