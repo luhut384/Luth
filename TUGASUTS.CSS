@@ -1,0 +1,26 @@
+.body {
+    background-color: blue;
+   
+}
+  
+
+.nav{
+    display: flex;
+    float: right;
+}
+.nav a{
+    margin: 5px;
+    
+}
+
+.input{
+    float: right;
+}
+
+.body{
+    background-color: blue;
+    width: auto;
+    border: 0ch;
+    height: max-content;
+}
+    
