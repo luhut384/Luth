@@ -1,0 +1,23 @@
+*{
+  margin: 0;
+}
+.main{
+  display: flex;
+  height: 540px;
+}
+header,footer{
+  background-color: yellow;
+  height: 100px;
+}
+article{
+  background-color: beige;
+  width: 50%;
+}
+aside{
+  background-color: pink;
+  width: 25%;
+}
+nav{
+  background-color: cyan;
+  width: 25%;
+}

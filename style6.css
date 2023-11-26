@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+
+}
+.content{
+    display: flex;
+    height:450px;
+}
+
+body{
+    background-color: pink;
+}
+header,footer{
+    background-color: cadetblue;
+    height: 100px;
+    margin: 20px;
+}
+aside{
+    background-color: aqua;
+    width: 25%;
+    margin: 20px;
+}
+article{
+    background-color: palevioletred;
+    width: 75%;
+    margin: 20px;
+    text-align: center;
+    align-items: end;
+    justify-content: space-evenly;
+}
+
+img{
+    width: 280px;
+    height: 200px;
+    object-fit: cover;
+    position: relative;
+    
+}
+.article{
+    margin-top: 180px;
+    align-items: end;
+    justify-content: space-evenly;
+}
+
+.foto{
+    margin-left: 52px;
+    margin-right: 52px;
+}
