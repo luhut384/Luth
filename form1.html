@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Form Validation</h2>
+    <form id="myForm" onsubmit="validateForm(); return false;">
+        <label for="namaPelanggan">Nama Pelanggan:</label>
+        <input type="text" id="namaPelanggan" required maxlength="30"><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required><br>
+
+        <label for="jamKeberangkatan">Jam Keberangkatan:</label>
+        <input type="text" id="jamKeberangkatan" required pattern="^([01]?[0-9]|2[0-3]):[0-5][0-9]$"><br>
+
+        <label for="tujuanKeberangkatan">Tujuan Keberangkatan:</label>
+        <input type="text" id="tujuanKeberangkatan" required><br>
+
+        <label for="jumlahTiket">Jumlah Tiket:</label>
+        <input type="number" id="jumlahTiket" required min="1" max="10"><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        function validateForm() {
+            // Mengambil nilai input
+            var namaPelanggan = document.getElementById("namaPelanggan").value;
+            var email = document.getElementById("email").value;
+            var jamKeberangkatan = document.getElementById("jamKeberangkatan").value;
+            var tujuanKeberangkatan = document.getElementById("tujuanKeberangkatan").value;
+            var jumlahTiket = document.getElementById("jumlahTiket").value;
+
+            // Validasi Nama Pelanggan
+            if (namaPelanggan.length > 30) {
+                displayError("Nama Pelanggan maksimal 30 karakter.");
+                return;
+            }
+
+            // Validasi Email
+            var emailRegex = /^\S+@\S+\.\S+$/;
+            if (!emailRegex.test(email)) {
+                displayError("Format Email tidak valid.");
+                return;
+            }
+
+            // Validasi Jam Keberangkatan
+            var jamRegex = /^([01]?[0-9]|2[0-3]):[0-5][0-9]$/;
+            if (!jamRegex.test(jamKeberangkatan)) {
+                displayError("Format Jam Keberangkatan tidak valid. Gunakan format 00:00 - 23:59.");
+                return;
+            }
+
+            // Validasi Jumlah Tiket
+            if (jumlahTiket < 1 || jumlahTiket > 10) {
+                displayError("Jumlah Tiket harus antara 1 dan 10.");
+                return;
+            }
+
+            // Menampilkan hasil jika semua data valid
+            displayResult(namaPelanggan, email, jamKeberangkatan, tujuanKeberangkatan, jumlahTiket);
+        }
+
+        function displayError(message) {
+            // Menampilkan pesan kesalahan
+            var errorDiv = document.getElementById("result");
+            errorDiv.innerHTML = "<p class='error'>" + message + "</p>";
+        }
+
+        function displayResult(namaPelanggan, email, jamKeberangkatan, tujuanKeberangkatan, jumlahTiket) {
+            // Menampilkan hasil data
+            var resultDiv = document.getElementById("result");
+            resultDiv.innerHTML = "<h3>Data Form Valid:</h3>" +
+                "<p><strong>Nama Pelanggan:</strong> " + namaPelanggan + "</p>" +
+                "<p><strong>Email:</strong> " + email + "</p>" +
+                "<p><strong>Jam Keberangkatan:</strong> " + jamKeberangkatan + "</p>" +
+                "<p><strong>Tujuan Keberangkatan:</strong> " + tujuanKeberangkatan + "</p>" +
+                "<p><strong>Jumlah Tiket:</strong> " + jumlahTiket + "</p>";
+        }
+    </script>
+</body>
+</html>

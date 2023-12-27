@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurs Rupiah Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        select, input, button {
+            margin-bottom: 20px;
+            padding: 8px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Kurs Rupiah Converter</h2>
+
+    <label for="amount">Masukkan Jumlah Mata Uang Asing:</label>
+    <input type="text" id="amount" placeholder="Masukkan jumlah mata uang asing">
+
+    <label for="currency">Pilih Mata Uang Asing:</label>
+    <select id="currency">
+        <option value="USD">Dollar US</option>
+        <option value="SGD">Dollar Singapore</option>
+        <option value="MYR">Ringgit Malaysia</option>
+        <option value="JPY">Yen Jepang</option>
+        <option value="EUR">Euro</option>
+        <option value="SAR">Riyal Arab Saudi</option>
+    </select>
+
+    <button onclick="convertCurrency()">Konversi</button>
+
+    <p id="result">Hasil Konversi: </p>
+
+    <script>
+        function convertCurrency() {
+            try {
+                const amount = parseFloat(document.getElementById('amount').value);
+                const currency = document.getElementById('currency').value;
+
+                const exchangeRates = {
+                    USD: 9915,
+                    SGD: 13472,
+                    MYR: 874,
+                    JPY: 120,
+                    EUR: 15888,
+                    SAR: 3592
+                };
+
+                const result = amount * exchangeRates[currency];
+
+                document.getElementById('result').innerHTML = `Hasil Konversi: ${result.toFixed(2)} Rupiah`;
+            } catch (error) {
+                document.getElementById('result').innerHTML = "Masukkan jumlah mata uang asing yang valid!";
+            }
+        }
+    </script>
+</body>
+</html>
